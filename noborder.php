@@ -1,12 +1,12 @@
 <?php
 
 /*
-* Plugin Name: noBorder.tech payment gateway for Gravity Forms
-* description: <a href="https://noborder.tech">noBorder.tech</a> secure payment gateway for Gravity Forms.
+* Plugin Name: noBorder.company payment gateway for Gravity Forms
+* description: <a href="https://noborder.company">noBorder.company</a> secure payment gateway for Gravity Forms.
 * Version: 1.1
-* Author: noBorder.tech
-* Author URI: https://noborder.tech
-* Author Email: info@noborder.tech
+* Author: noBorder.company
+* Author URI: https://noborder.company
+* Author Email: info@noborder.company
 * Text Domain: noborder_gf_payment_plugin
 * Tested version up to: 6.1
 * copyright (C) 2020 noborder
@@ -911,7 +911,7 @@ class GF_noborder_Gateway {
 		</span>
 		</div>
 		
-		<div class="gform-settings-description gform-kitchen-sink"><?php _e("By leaving this field blank, the customers will be able to pay through all active crypto currencies in the noBorder.tech. If you want to select more than one crypto currency, please separate them with a dash. (example: bitcoin-ethereum-bnb)", "gravityformsnoborder"); ?></div>
+		<div class="gform-settings-description gform-kitchen-sink"><?php _e("By leaving this field blank, the customers will be able to pay through all active crypto currencies in the noBorder.company. If you want to select more than one crypto currency, please separate them with a dash. (example: bitcoin-ethereum-bnb)", "gravityformsnoborder"); ?></div>
 
 		</div>
 		</fieldset>
@@ -1406,7 +1406,7 @@ class GF_noborder_Gateway {
 			'callback' => self::return_url($form['id'], $entry_id)
 		);
 
-		$url = 'https://noborder.tech/action/ws/request_create';
+		$url = 'https://noborder.company/action/ws/request_create';
 		$ch = curl_init($url);
 		curl_setopt($ch, CURLOPT_POST, true);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
@@ -1510,7 +1510,7 @@ class GF_noborder_Gateway {
 				'request_id' => $transaction_id
 			);
 			
-			$url = 'https://noborder.tech/action/ws/request_status';
+			$url = 'https://noborder.company/action/ws/request_status';
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_POST, true);
 			curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params));
